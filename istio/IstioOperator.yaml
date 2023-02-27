@@ -1,0 +1,15 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+  name: istio-default-profile
+spec:
+  hub: gcr.io/istio-release
+  profile: default
+  components:    
+    ingressGateways:
+    - enabled: true
+      k8s:
+        hpaSpec:
+          minReplicas: 3
+      name: istio-ingressgateway

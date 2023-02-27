@@ -1,0 +1,10 @@
+resources:
+  - IstioOperator.yaml
+  - ./release-1.16/prometheus.yaml
+  - ./release-1.16/grafana.yaml  
+  - ./release-1.16/jaeger.yaml
+  - ./release-1.16/kiali.yaml
+
+
+
+
